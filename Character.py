@@ -31,3 +31,42 @@ class Character(Entity):
             self.lives -= 1
         if self.lives <= 0:
             self.is_alive = False
+
+    def draw(self, screen):
+        """
+        Draws the character on the screen.
+        :param screen: The screen to draw on.
+        """
+        # Implement drawing logic here  
+
+        pass
+    def respawn(self, x, y):
+        """     "
+        "Respawns the character at the given coordinates."
+        """
+        self.x = x
+        self.y = y
+        self.lives = 3
+        self.is_alive = True    
+
+    def update(self):
+        """
+        Updates the character's state (e.g., position, animation).
+        """
+        # Implement update logic here
+        pass
+    def __str__(self):
+        return f"Character(lives={self.lives}, is_alive={self.is_alive})"
+    def __repr__(self):
+        return f"Character(lives={self.lives}, is_alive={self.is_alive})"   
+    
+
+if __name__ == "__main__":
+    # Example usage
+    character = Character(lives=3)
+    print(character)  # Output: Character(lives=3, is_alive=True)
+    character.move("up")
+    character.shoot()
+    print(character)  # Output: Character(lives=3, is_alive=True)
+    character.collide(Entity(0, 0, None))  # Simulate collision
+    print(character)  # Output: Character(lives=2, is_alive=True)   
