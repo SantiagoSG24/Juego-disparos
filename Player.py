@@ -43,4 +43,15 @@ class Player(Character):
         pass        
 
     def __str__(self):
-        
+    
+        return f"Player(lives={self.lives}, is_alive={self.is_alive}, score={self.score})"
+    def __repr__(self):
+        return f"Player(lives={self.lives}, is_alive={self.is_alive}, score={self.score})"
+    def __eq__(self, other):
+
+        if not isinstance(other, Player):
+            return False
+        return (self.lives == other.lives and
+                self.is_alive == other.is_alive and
+                self.score == other.score)
+    
