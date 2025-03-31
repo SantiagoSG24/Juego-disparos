@@ -60,10 +60,38 @@ class Game:
 
 
 
-    
+
     def convert_enemy_to_star(self):
         if self.is_running:
             self.score += 1
             print(f"Enemy converted to star! Current score: {self.score}")
         else:
             print("Game is not running. Cannot convert enemy.")
+
+
+
+
+            def lose_life(self):
+                if self.player and hasattr(self.player, 'lives'):
+                    self.player.lives -= 1
+                    print(f"Player hit! Lives remaining: {self.player.lives}")
+                    if self.player.lives <= 0:
+                        print("Player has no lives left!")
+                        self.end_game()
+                else:
+                    print("Player does not have a lives attribute.")
+                    
+
+            def increase_score(self, points):
+                if self.is_running:
+                    self.score += points
+                    print(f"Score increased by {points}. Current score: {self.score}")
+                else:
+                    print("Game is not running. Cannot increase score.")
+
+                    
+                    def display_score_and_lives(self):
+                        if self.player and hasattr(self.player, 'lives'):
+                            print(f"Score: {self.score}, Lives: {self.player.lives}")
+                        else:
+                            print(f"Score: {self.score}, Lives: N/A")
