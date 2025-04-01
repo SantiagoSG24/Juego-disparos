@@ -1,3 +1,7 @@
+from Entity import Entity
+#         return self.x != 0 or self.y != 0 or self.image is not None
+from Character import Character     
+from Opponent import Opponent
 from Game import Game
 if __name__ == "__main__":
     game = Game()

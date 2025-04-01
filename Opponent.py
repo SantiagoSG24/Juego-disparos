@@ -1,5 +1,5 @@
 from Character import Character
-
+from boss import FinalBoss
 class Opponent(Character):
     def __init__(self, is_star=False, *args, **kwargs):
         super().__init__(*args, **kwargs)

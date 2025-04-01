@@ -1,10 +1,15 @@
 from Entity import Entity
-
+from Player import Player
+from Opponent import Opponent
 class Character(Entity):
     def __init__(self, lives):
         super().__init__()
         self.lives = lives
         self.is_alive = True
+        self.x = 0  # Initial x-coordinate
+        self.y = 0  # Initial y-coordinate
+        self.image = None  # Placeholder for the character's image
+
 
     def move(self, direction):
         """

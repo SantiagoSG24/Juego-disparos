@@ -1,3 +1,6 @@
+from Opponent import Opponent
+from Player import Player
+from Shot import Shot
 class Game:
     def __init__(self):
         self.score = 0
@@ -89,7 +92,7 @@ class Game:
                 else:
                     print("Game is not running. Cannot increase score.")
 
-                    
+
                     def display_score_and_lives(self):
                         if self.player and hasattr(self.player, 'lives'):
                             print(f"Score: {self.score}, Lives: {self.player.lives}")
